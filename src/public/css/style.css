@@ -1,6 +1,21 @@
 /* Reset */
 
-*{
+* {
     margin:0;
     padding:0;
 } 
+
+#chat {
+    height: 75vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.btn:focus {
+    box-shadow: none !important;
+}
+
+input {
+    box-shadow: none !important;
+    outline: none !important;
+}
