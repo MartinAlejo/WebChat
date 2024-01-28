@@ -12,6 +12,10 @@ const app = express()
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// static
+
+app.use(express.static(__dirname + "/public"));
+
 // handlebars configuration
 
 app.engine('handlebars', engine());
