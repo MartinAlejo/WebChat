@@ -26,21 +26,21 @@ app.set('view engine', 'handlebars');
 // server start
 
 const server = app.listen(8080, () => {
-    console.log("Server is running")
+  console.log("Server is running")
 })
 
 // socket io
 
 const socketServer = new Server(server)
 
-// socketServer.on("connection", (socket) => {
+socketServer.on("connection", (socket) => {
     
-//     // Cuando se recibe un mensaje, todos lo renderizan
-//     socket.on("new-message", (newMessage) => {
-//         socketServer.emit("update-messages", newMessage)
-//     })
+  // Cuando se recibe un mensaje, todos lo renderizan
+  socket.on("new-message", (newMessage) => {
+    socketServer.emit("update-messages", newMessage)
+  })
 
-// })
+})
 
 // routers
 

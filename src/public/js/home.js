@@ -1,6 +1,6 @@
 const socket = io()
 
-let user = ""
+let userName = ""
 
 let messageInput = document.getElementById("message-input")
 // let submitMsgBtn = document.getElementById("submit-message-btn")
@@ -22,22 +22,24 @@ Swal.fire({
   confirmButtonText: 'Continuar',
   confirmButtonColor: '#47a5e7'
 }).then((result) => {
-  user = result.value;
+  userName = result.value;
 });
 
 // Socket.on
 
+socket.on("update-messages", (newMessage) => {
+  let chatMsg = document.createElement("p")
+  chatMsg.innerHTML = `<b>${newMessage.userName}</b>: ${newMessage.value}`
+
+  chat.appendChild(chatMsg)
+})
+
 // Event listeners
 
 chatForm.addEventListener("submit", (e) => {
-    e.preventDefault()
+  e.preventDefault()
 
-    let chatMsg = document.createElement("p")
-    console.log(user)
-    chatMsg.innerText = `${user}: ${messageInput.value}`
-
-    chat.appendChild(chatMsg)
-
-    messageInput.value = ""
+  socket.emit("new-message", {userName: userName, value: messageInput.value})
+  messageInput.value = ""
 })
 
