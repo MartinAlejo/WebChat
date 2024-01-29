@@ -1,5 +1,6 @@
 import express from "express"
 import { engine } from "express-handlebars";
+import { Server } from "socket.io";
 
 import __dirname from "./utils.js";
 
@@ -24,9 +25,22 @@ app.set('view engine', 'handlebars');
 
 // server start
 
-app.listen(8080, () => {
+const server = app.listen(8080, () => {
     console.log("Server is running")
 })
+
+// socket io
+
+const socketServer = new Server(server)
+
+// socketServer.on("connection", (socket) => {
+    
+//     // Cuando se recibe un mensaje, todos lo renderizan
+//     socket.on("new-message", (newMessage) => {
+//         socketServer.emit("update-messages", newMessage)
+//     })
+
+// })
 
 // routers
 

@@ -8,15 +8,15 @@
     <div class="row p-4">
         <div class="col-12 border border-1 border-dark rounded-3">
 
-          <div class="row" id="chat">
-            Lorem ipsum dolor sit amet.
+          <div id="chat">
+            {{!-- Aqui se agregan los mensajes del chat --}}
           </div>
 
           <div class="row border-top border-1 border-dark p-2" id="input-bar" >
-            <form>
+            <form id="chat-form">
               <div class="input-group">
-                <input type="text" class="form-control mr-1" placeholder="Escribe tu mensaje aquí">
-                <button type="button" class="btn btn-outline-primary">Enviar</button>
+                <input type="text" class="form-control mr-1" placeholder="Escribe tu mensaje aquí" id="message-input">
+                <button type="submit" class="btn btn-outline-primary" id="submit-message-btn">Enviar</button>
               </div>
             </form>
           </div>
@@ -24,3 +24,7 @@
         </div>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/home.js"></script>
