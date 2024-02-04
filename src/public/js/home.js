@@ -29,7 +29,7 @@ Swal.fire({
 
 socket.on("update-messages", (newMessage) => {
   let msgContainer = document.createElement("div")
-  msgContainer.classList.add("border", "border-2", "rounded-3", "p-2", "my-2")
+  msgContainer.classList.add("border", "border-2", "rounded-3", "p-2", "m-2")
 
   msgContainer.innerHTML = `<p class="m-0"><b>${newMessage.userName}</b>: ${newMessage.value}</p>`
 
