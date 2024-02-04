@@ -1,7 +1,9 @@
 <nav class="navbar navbar-light" style="background-color: #47a5e7;">
   <div class="container-fluid">
-    <img src="/images/comment-dots-regular.svg" width="30" height="24">
-    <span class="navbar-brand mb-0 h1" style="color: white">WebChat</span>
+    <div class="col" id="brand-container">
+      <img src="/images/comment-dots-regular.svg" width="30" height="24">
+      <span class="navbar-brand p-0 mb-1 ms-2 me-0 h1" style="color: white">WebChat</span>
+    </div>
   </div>
 </nav>
 
@@ -9,7 +11,7 @@
     <div class="row p-4">
         <div class="col-12 border border-1 border-dark rounded-3 p-0">
 
-          <div id="chat">
+          <div id="chat" class="overflow-auto">
             {{!-- Aqui se agregan los mensajes del chat --}}
           </div>
 

@@ -1,14 +1,12 @@
 /* Reset */
 
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 } 
 
 #chat {
     height: 75vh;
-    overflow-x: visible;
-    overflow-y: auto;
 }
 
 .btn:focus {
@@ -24,15 +22,26 @@ p {
     word-wrap: break-word
 }
 
-/* #chat::-webkit-scrollbar {
-    width: 1em !important;
+#brand-container {
+    display: flex;
+    align-items: center;
 }
- 
+
+/* Scrollbar */
+
+#chat::-webkit-scrollbar {
+    width: 8px;
+  }
+  
 #chat::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) !important;
+background: #f1f1f1; 
 }
- 
+
 #chat::-webkit-scrollbar-thumb {
-  background-color: darkgrey !important;
-  outline: 1px solid slategrey !important;
-} */
+background: #b3b3b3; 
+}
+
+/* Handle on hover */
+#chat::-webkit-scrollbar-thumb:hover {
+background: rgb(153, 153, 153); 
+}
