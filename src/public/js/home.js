@@ -28,10 +28,12 @@ Swal.fire({
 // Socket.on
 
 socket.on("update-messages", (newMessage) => {
-  let chatMsg = document.createElement("p")
-  chatMsg.innerHTML = `<b>${newMessage.userName}</b>: ${newMessage.value}`
+  let msgContainer = document.createElement("div")
+  msgContainer.classList.add("border", "border-2", "rounded-3", "p-2", "my-2")
 
-  chat.appendChild(chatMsg)
+  msgContainer.innerHTML = `<p class="m-0"><b>${newMessage.userName}</b>: ${newMessage.value}</p>`
+
+  chat.appendChild(msgContainer)
 })
 
 // Event listeners

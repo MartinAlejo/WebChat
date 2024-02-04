@@ -20,6 +20,10 @@ input {
     outline: none !important;
 }
 
+p {
+    word-wrap: break-word
+}
+
 /* #chat::-webkit-scrollbar {
     width: 1em !important;
 }

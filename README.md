@@ -2,6 +2,7 @@
 
 Chat desarrollado con Express
 
-## Librerías
+## Librerías utilizadas
 
 - Handlebars
+- Socket.IO
