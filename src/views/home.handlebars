@@ -1,0 +1,33 @@
+<nav class="navbar navbar-light" style="background-color: #47a5e7;">
+  <div class="container-fluid">
+    <div class="col" id="brand-container">
+      <img src="/images/comment-dots-regular.svg" width="30" height="24">
+      <span class="navbar-brand p-0 mb-1 ms-2 me-0 h1" style="color: white">WebChat</span>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row p-4">
+        <div class="col-12 border border-1 border-dark rounded-3 p-0">
+
+          <div id="chat" class="overflow-auto">
+            {{!-- Aqui se agregan los mensajes del chat --}}
+          </div>
+
+          <div class="border-top border-1 border-dark p-2" id="input-bar" >
+            <form id="chat-form">
+              <div class="input-group">
+                <input type="text" class="form-control mr-1" placeholder="Escribe tu mensaje aquí" id="message-input">
+                <button type="submit" class="btn btn-outline-primary" id="submit-message-btn">Enviar</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/home.js"></script>

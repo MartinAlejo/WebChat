@@ -1,0 +1,47 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+} 
+
+#chat {
+    height: 75vh;
+}
+
+.btn:focus {
+    box-shadow: none !important;
+}
+
+input {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+p {
+    word-wrap: break-word
+}
+
+#brand-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Scrollbar */
+
+#chat::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+#chat::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+
+#chat::-webkit-scrollbar-thumb {
+background: #b3b3b3; 
+}
+
+/* Handle on hover */
+#chat::-webkit-scrollbar-thumb:hover {
+background: rgb(153, 153, 153); 
+}
