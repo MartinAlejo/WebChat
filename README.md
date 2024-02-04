@@ -2,7 +2,7 @@
 
 Chat desarrollado con Express.
 
-Se utilizo Handlebars como motor de plantillas, y Socket.IO para manejar los mensajes del chat.
+Se utilizó Handlebars como motor de plantillas, y Socket.IO para manejar los mensajes del chat.
 
 ## Librerías utilizadas
 
